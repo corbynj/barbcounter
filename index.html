@@ -66,6 +66,10 @@
 				width: 120px;
 			}
 			
+			.hidden {
+				display: none !important;
+			}
+			
 			#footer {
 				position: fixed;
 				left: 0;
@@ -80,9 +84,10 @@
 			}
 		</style>
 	</head>
-	<body onload="startTimer();">
+	<!-- <body onload="startTimer();"> -->
+	<body>
 		<div id="full-page">
-			<div id="header-text">
+			<div id="header-text" class="header-text">
 				<p>Time Since Barb Quit Super Mario Maker 2</p>
 			</div>
 			<div id="timer">
@@ -102,13 +107,17 @@
 					<div id="seconds-label" class="timer timer-label">Seconds</div>
 				</div>
 			</div>
-			<div>
+			<div id="disclaimer-text">
+				<p>Barb currently has Super Mario Maker 2 installed. The timer will remain at 00:00:00:00 until proven otherwise.</p>
+			</div>
+			<div id="return-link" class="hidden">
 				<p><a href="https://clips.twitch.tv/HandsomeConsideratePoxFeelsBadMan-bWY01Xo-O2bOpfhA">Has Barb considered a return to Mario Maker?</a></p>
 			</div>
 			<div id="footer">
 				<div class="footer-text">Barb uninstalled Mario Maker on January 27, 2021 at 1:10pm EST.</div>
 				<div class="footer-text">Barb reinstalled Mario Maker on April 1, 2021.</div>
 				<div class="footer-text">Barb uninstalled Mario Maker again on April 1, 2021 at 1:52pm EDT.</div>
+				<div class="footer-text">Barb reinstalled Mario Maker again on September 22, 2021.</div>
 			</div>
 		</div>
 	</body>
