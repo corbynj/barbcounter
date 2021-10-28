@@ -11,7 +11,7 @@
 			}
 
 			function updateTimer() {
-				var epoch = new Date("Apr 1, 2021 13:52:00").getTime();
+				var epoch = new Date("Oct 28, 2021 13:42:00").getTime();
 				var currentTime = new Date().getTime();
 				var timeSince = (currentTime - epoch) / 1000;
 
@@ -84,8 +84,7 @@
 			}
 		</style>
 	</head>
-	<!-- <body onload="startTimer();"> -->
-	<body>
+	<body onload="startTimer();">
 		<div id="full-page">
 			<div id="header-text" class="header-text">
 				<p>Time Since Barb Quit Super Mario Maker 2</p>
@@ -107,7 +106,7 @@
 					<div id="seconds-label" class="timer timer-label">Seconds</div>
 				</div>
 			</div>
-			<div id="disclaimer-text">
+			<div id="disclaimer-text" class="hidden">
 				<p>Barb currently has Super Mario Maker 2 installed. The timer will remain at 00:00:00:00 until it is uninstalled again.</p>
 			</div>
 			<div id="return-link" class="hidden">
@@ -118,6 +117,7 @@
 				<div class="footer-text">Barb reinstalled Mario Maker on April 1, 2021.</div>
 				<div class="footer-text">Barb uninstalled Mario Maker again on April 1, 2021 at 1:52pm EDT.</div>
 				<div class="footer-text">Barb reinstalled Mario Maker again on September 22, 2021.</div>
+				<div class="footer-text">Barb uninstalled Mario Maker again on October 28, 2021 at 1:43pm EDT.</div>
 			</div>
 		</div>
 	</body>
