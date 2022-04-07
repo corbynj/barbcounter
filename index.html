@@ -6,15 +6,28 @@
 		<title>Time Since Barb Quit Super Mario Maker 2</title>
 		<script>
 			function startTimer() {
-				updateTimer();
-				setInterval(updateTimer, 1000);
+				// Change this to false when Barb reinstalls
+				var counterEnabled = true;
+				
+				if (counterEnabled) {
+					// Update the timer immediately
+					updateTimer();
+					// Refresh the timer every 1000 milliseconds
+					setInterval(updateTimer, 1000);
+					
+				} else {
+					// Unhide the disclaimer-text
+					document.getElementById("disclaimer-text").classList.remove("hidden");
+				}
 			}
 
 			function updateTimer() {
+				// Set the epoch to the time that Barb most recently uninstalled
 				var epoch = new Date("Apr 7, 2022 11:16:00").getTime();
 				var currentTime = new Date().getTime();
 				var timeSince = (currentTime - epoch) / 1000;
 
+				// Date math
 				var days = Math.floor(timeSince / 86400);
 				timeSince %= 86400;
 				var hours = Math.floor(timeSince / 3600);
@@ -23,6 +36,7 @@
 				timeSince %= 60;
 				var seconds = Math.floor(timeSince);
 
+				// Update the html elements with the new values
 				document.getElementById("days").innerHTML = padLeft(days);
 				document.getElementById("hours").innerHTML = padLeft(hours);
 				document.getElementById("minutes").innerHTML = padLeft(minutes);
@@ -106,7 +120,9 @@
 					<div id="seconds-label" class="timer timer-label">Seconds</div>
 				</div>
 			</div>
-			<noscript>This page requires javascript to function.</noscript>
+			<noscript>
+				<p>This page requires javascript to function.</p>
+			</noscript>
 			<div id="disclaimer-text" class="hidden">
 				<p>Barb currently has Super Mario Maker 2 installed. The timer will remain at 00:00:00:00 until it is uninstalled again.</p>
 			</div>
