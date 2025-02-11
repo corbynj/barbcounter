@@ -7,7 +7,7 @@
 		<script>
 			function startTimer() {
 				// Change this to true when Barb uninstalls
-				var counterEnabled = false;
+				var counterEnabled = true;
 				
 				if (counterEnabled) {
 					// Update the timer immediately
@@ -23,7 +23,7 @@
 
 			function updateTimer() {
 				// Set the epoch to the time that Barb most recently uninstalled
-				var epoch = new Date("December 12, 2024 03:18:00 JST").getTime();
+				var epoch = new Date("2024-12-12T03:18:00+09:00").getTime();
 				var currentTime = new Date().getTime();
 				var timeSince = (currentTime - epoch) / 1000;
 
