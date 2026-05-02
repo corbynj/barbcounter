@@ -7,7 +7,7 @@
 		<script>
 			function startTimer() {
 				// Change this to true when Barb uninstalls
-				var counterEnabled = false;
+				var counterEnabled = true;
 				
 				if (counterEnabled) {
 					// Update the timer immediately
@@ -23,7 +23,7 @@
 
 			function updateTimer() {
 				// Set the epoch to the time that Barb most recently uninstalled
-				var epoch = new Date("2025-04-09T04:20:00+09:00").getTime();
+				var epoch = new Date("2026-05-01T15:17:00 EDT").getTime();
 				var currentTime = new Date().getTime();
 				var timeSince = (currentTime - epoch) / 1000;
 
@@ -124,9 +124,6 @@
 					<div id="seconds-label" class="timer timer-label">Seconds</div>
 				</div>
 			</div>
-			<div id="return-text">
-				<p>Barb is playing Super Mario Maker 2 viewer levels on May 1, 2026.</p>
-			</div>
 			<noscript>
 				<p>This page requires JavaScript to function.</p>
 			</noscript>
@@ -134,7 +131,7 @@
 				<p>Barb currently has Super Mario Maker 2 installed. The timer will remain at 00:00:00:00 until it is uninstalled again.</p>
 			</div>
 			<div id="footer">
-				<div class="footer-text">Barb was last seen playing Super Mario Maker 2 on April 8, 2025.</div>
+				<div class="footer-text">Barb was last seen playing Super Mario Maker 2 on May 1, 2026.</div>
 			</div>
 		</div>
 	</body>
